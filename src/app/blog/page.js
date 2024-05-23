@@ -13,11 +13,13 @@ const Blog = async () => {
               <div className="p-4 lg:w-full md:px-40">
                 <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                   {post._links['wp:featuredmedia'] && (
-                    <img
-                      alt="feature-img"
-                      className="featureImg flex-shrink-0 rounded-lg md:w-270 md:h-44 object-cover object-center sm:mb-0 mb-4"
-                      src={post._embedded['wp:featuredmedia'][0].source_url}
-                    />
+                    <Link href={`blog/${post[0].slug}`}>
+                      <img
+                        alt="feature-img"
+                        className="featureImg flex-shrink-0 rounded-lg md:w-270 md:h-44 object-cover object-center sm:mb-0 mb-4"
+                        src={post._embedded['wp:featuredmedia'][0].source_url}
+                      />
+                    </Link>
                   )}
                   <div className="flex-grow text-left sm:pl-8">
                     <h2 className="title-font font-medium text-lg text-gray-900">

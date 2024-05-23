@@ -22,12 +22,14 @@ const Learnmore = ({posts}) => {
                     className="bg-white p-4 flex items-center gap-2"
                   >
                     {post._links['wp:featuredmedia'] && (
-                      <img
-                        src={post._embedded['wp:featuredmedia'][0].source_url}
-                        alt={post.title.rendered}
-                        width="170px"
-                        className="rounded-lg"
-                      />
+                      <Link href={`blog/${posts[0].slug}`}>
+                        <img
+                          src={post._embedded['wp:featuredmedia'][0].source_url}
+                          alt={post.title.rendered}
+                          width="170px"
+                          className="rounded-lg"
+                        />
+                      </Link>
                     )}
                     <div className="content flex flex-col">
                       <Link href={`blog/${post.slug}`}>

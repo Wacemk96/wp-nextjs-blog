@@ -14,11 +14,13 @@ const Blogposts = async ({posts}) => {
                   className="bg-white p-6"
                 >
                   {posts[0]._links['wp:featuredmedia'] && (
-                    <img
-                      src={posts[0]._embedded['wp:featuredmedia'][0].source_url}
-                      alt={posts[0].title.rendered}
-                      className="pb-5"
-                    />
+                    <Link href={`blog/${posts[0].slug}`}>
+                      <img
+                        src={posts[0]._embedded['wp:featuredmedia'][0].source_url}
+                        alt={posts[0].title.rendered}
+                        className="pb-5"
+                      />
+                    </Link>
                   )}
                   <Link href={`blog/${posts[0].slug}`}>
                     <h2 className="text-2xl font-bold mb-2">{posts[0].title.rendered}</h2>
@@ -39,12 +41,14 @@ const Blogposts = async ({posts}) => {
                     className="bg-white p-4 flex items-center gap-5"
                   >
                     {post._links['wp:featuredmedia'] && (
-                      <img
-                        src={post._embedded['wp:featuredmedia'][0].source_url}
-                        alt={post.title.rendered}
-                        width="170px"
-                        className="rounded-lg"
-                      />
+                      <Link href={`blog/${posts[0].slug}`}>
+                        <img
+                          src={post._embedded['wp:featuredmedia'][0].source_url}
+                          alt={post.title.rendered}
+                          width="170px"
+                          className="rounded-lg"
+                        />
+                      </Link>
                     )}
                     <div className="content flex flex-col">
                       <Link href={`blog/${post.slug}`}>
