@@ -33,7 +33,9 @@ const Learnmore = ({posts}) => {
                     )}
                     <div className="content flex flex-col">
                       <Link href={`blog/${post.slug}`}>
-                        <h3 className="text-lg font-bold mb-1">{post.title.rendered}</h3>
+                        <h3 className="text-lg font-bold mb-1 hover:text-[#27D07E]">
+                          {post.title.rendered}
+                        </h3>
                       </Link>
                       {/* <p className="text-gray-700">{post.content}</p> */}
                     </div>

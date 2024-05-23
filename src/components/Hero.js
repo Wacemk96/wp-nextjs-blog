@@ -9,7 +9,7 @@ const Hero = () => {
           LinkedIn Insights & Professional Guidance
         </h1>
         <div className="w-[80%] bg-white flex justify-center items-center gap-5 px-5 py-10 border-2">
-          <div class="w-20 h-20 rounded-full overflow-hidden inline-flex items-center justify-center bg-gray-200 text-gray-400">
+          <div className="w-20 h-20 rounded-full overflow-hidden inline-flex items-center justify-center bg-gray-200 text-gray-400">
             <img
               src="./profile.jpeg"
               alt="profile"

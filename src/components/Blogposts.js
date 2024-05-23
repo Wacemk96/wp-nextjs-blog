@@ -23,7 +23,9 @@ const Blogposts = async ({posts}) => {
                     </Link>
                   )}
                   <Link href={`blog/${posts[0].slug}`}>
-                    <h2 className="text-2xl font-bold mb-2">{posts[0].title.rendered}</h2>
+                    <h2 className="text-2xl font-bold mb-2 hover:text-[#27D07E]">
+                      {posts[0].title.rendered}
+                    </h2>
                   </Link>
                   <div
                     dangerouslySetInnerHTML={{__html: posts[0].excerpt.rendered.substring(0, 200)}}
@@ -52,7 +54,9 @@ const Blogposts = async ({posts}) => {
                     )}
                     <div className="content flex flex-col">
                       <Link href={`blog/${post.slug}`}>
-                        <h3 className="text-lg font-bold mb-1">{post.title.rendered}</h3>
+                        <h3 className="text-lg font-bold mb-1 hover:text-[#27D07E]">
+                          {post.title.rendered}
+                        </h3>
                       </Link>
                       {/* <p className="text-gray-700">{post.content}</p> */}
                     </div>
